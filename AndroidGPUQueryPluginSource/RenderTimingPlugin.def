@@ -1,0 +1,11 @@
+LIBRARY
+
+EXPORTS
+   UnityPluginLoad
+   UnityPluginUnload
+   PrintLog
+   PrintLogError
+   PrintEventTime
+   TimeQueryBegin
+   TimeQueryEnd
+   TimeQueryEndFrame
