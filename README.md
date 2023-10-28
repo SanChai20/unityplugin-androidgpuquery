@@ -1,2 +1,2 @@
 # unityplugin-androidgpuquery
-Only support unity URP and Anroid(opengles) platform. 
+A unity Plug-in. Only support for unity URP and functioning on Anroid(opengles) platform. 
