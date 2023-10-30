@@ -7,6 +7,9 @@ Improvements:
 * support custom render feature timings
 * support gui instead of log
 
-Only support for unity URP and functioning on Anroid(opengles) platform. 
+Limitations:
+
+* only support unity URP
+* only support Anroid(opengles) platform
 
 
