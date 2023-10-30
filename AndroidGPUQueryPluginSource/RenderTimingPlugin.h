@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 #pragma once
 #include "Unity/IUnityInterface.h"
 
@@ -56,44 +57,3 @@
   #define SUPPORT_OPENGL_UNIFIED 1
   #define SUPPORT_OPENGL_CORE 1
 #endif
-
-// #if SUPPORT_OPENGL_UNIFIED
-//     #if UNITY_IPHONE
-//         #include <OpenGLES/ES2/gl.h>
-//     #elif UNITY_ANDROID
-//         #include <GLES3/gl3.h>
-//         #define GL_TIME_ELAPSED                   0x88BF
-//         #define GL_GPU_DISJOINT                   0x8FBB
-//     #else
-//         #include "GL/glew.h"
-//     #endif
-
-// // Define Query Data Class
-// class GLTimeStampGPUQuery 
-// {
-// public:
-//     static const int FRAME_COUNT = 2;
-//     static const int QUERY_COUNT = 50;//call record query function up to 50 times within one frame.
-// private:
-//     GLuint _query[QUERY_COUNT * FRAME_COUNT];//2 stands for frame count. 50 stands for query count
-//     int _frameCount = 0;
-// public:
-//     void init();
-//     GLuint queryForWrite(int eventID);
-//     GLuint queryForRead(int eventID);
-//     void newFrame();
-// };
-// #include <vector>
-// class GLTimeStampGPUQueryWrapper 
-// {
-// private: 
-//     GLTimeStampGPUQuery _timeQueryData;
-//     std::vector<int> _eventIDList;
-// public:
-//     void init();
-//     void begin(int eventID);
-//     void end(int eventID);
-//     void endFrame();
-// };
-// #endif
-
