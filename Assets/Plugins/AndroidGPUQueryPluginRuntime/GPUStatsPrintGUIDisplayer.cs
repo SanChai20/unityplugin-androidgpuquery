@@ -6,13 +6,7 @@ using UnityEngine.Rendering.Universal;
 
 public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
-    #region 局部变量
     private static T _Instance;
-    #endregion
-    #region 属性
-    /// <summary>
-    /// 获取单例对象
-    /// </summary>
     public static T Instance
     {
         get
@@ -30,8 +24,6 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             return _Instance;
         }
     }
-    #endregion
-    #region 方法
     protected virtual void Awake()
     {
         if (null == _Instance)
@@ -44,11 +36,10 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    #endregion
 }
 public class GPUStatsPrintGUIDisplayer : Singleton<GPUStatsPrintGUIDisplayer>
 {
-    private Dictionary<int, string> _queryTimingDict = new Dictionary<int, string>();//key : int - offset . value : string - gpu time + event name
+    private Dictionary<int, string> _queryTimingDict = new Dictionary<int, string>();
     private List<int> _keylist;
     private GUIStyle _backGroundStyle;
     private GUIContent _groupContent;
