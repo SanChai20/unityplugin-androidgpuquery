@@ -1,5 +1,5 @@
 # unityplugin-androidgpuquery
-A unity plug-in which is based on https://github.com/google/render-timing-for-unity. 
+A unity plug-in based on https://github.com/google/render-timing-for-unity. 
 
 Improvements:
 
