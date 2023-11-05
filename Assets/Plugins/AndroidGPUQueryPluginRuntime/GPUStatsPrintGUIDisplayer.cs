@@ -48,7 +48,7 @@ public class GPUStatsPrintGUIDisplayer : Singleton<GPUStatsPrintGUIDisplayer>
     private static int LEFT_OFFSET = 100;
     private static int FONT_SIZE = 20;
 
-    private UniversalRendererData _urpData;
+    private ScriptableRendererData _urpData;
     private GPUStatsPrintRenderFeature _gpuQueryFeature;
 
     private GPUStatsPrintGUIDisplayer() {}
@@ -58,7 +58,7 @@ public class GPUStatsPrintGUIDisplayer : Singleton<GPUStatsPrintGUIDisplayer>
         Debug.LogWarning("GPUStatsPrintGUIDisplayer Start...");
         UniversalRenderPipelineAsset URPAsset = (UniversalRenderPipelineAsset)QualitySettings.renderPipeline;
         FieldInfo propertyInfo = URPAsset.GetType().GetField("m_RendererDataList", BindingFlags.Instance | BindingFlags.NonPublic);
-        _urpData = (UniversalRendererData)(((ScriptableRendererData[])propertyInfo?.GetValue(URPAsset))?[0]);
+        _urpData = (ScriptableRendererData)(((ScriptableRendererData[])propertyInfo?.GetValue(URPAsset))?[0]);
         _gpuQueryFeature = ScriptableObject.CreateInstance<GPUStatsPrintRenderFeature>();
         if (_urpData != null && _gpuQueryFeature != null)
         {
